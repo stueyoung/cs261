@@ -7,6 +7,10 @@ const server = http.createServer( (request, response) => {
   {
     response.end("Hello World! You are caller number " + hits);
     hits = hits + 1;
+    if(hits > 50)
+    {
+      hits = 1;
+    }
   }
   else
   {
